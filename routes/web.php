@@ -14,5 +14,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PostController@index');
-Route::post('/posts', 'PostController@store');
-Route::get('/posts/{post}', 'PostController@show');
