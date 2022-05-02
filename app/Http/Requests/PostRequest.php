@@ -11,7 +11,7 @@ class PostRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+   public function rules()
     {
         return [
             'post.title' => 'required|string|max:100',
