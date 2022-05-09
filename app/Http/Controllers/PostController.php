@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Post;
 use App\Http\Requests\PostRequest; 
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -28,4 +30,9 @@ class PostController extends Controller
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
+    
+    public function edit(Post $post)
+   {
+    return view('posts/edit')->with(['post' => $post]);
+   }
 }
