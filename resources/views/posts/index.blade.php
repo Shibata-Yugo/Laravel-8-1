@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+ @extends('layouts.app')
+ @section('content')
+ 
+ {{Auth::user()->name}}
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -24,3 +29,4 @@
        <a href="">{{ $post->category->name }}</a>
     </body>
 </html>
+@endsection
